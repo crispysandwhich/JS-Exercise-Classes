@@ -169,6 +169,21 @@ class Student extends Lambdasian {
     super (obj);
 
     this.previousBackground = obj.previousBackground;
+    this.className = obj.className;
+    this.favSubjects = obj.favSubjects;
+  }
+  listSubjects(){
+    const string = this.favSubjects.map((sub) => sub).toString();
+    return `Loving ${string}!`
+    
+  }
+  PRAssignment(subject){
+    // console.log(this.name)
+    return `${this.name} has submitted a PR for ${subject}`
+  }
+  sprintChallenge(subject){
+    // console.log(this.name)
+    return `${this.name} has begun sprint challange on ${subject}`
   }
 }
 
